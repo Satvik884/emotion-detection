@@ -10,7 +10,7 @@ import os
 model_path = 'my_model.h5'
 if not os.path.exists(model_path):
     # Google Drive direct download link (replace with your own)
-    gdown.download("https://drive.google.com/file/d/1SuaUJpR9Dla7tucNWF1Unzc0lL9yEfC8/view?usp=sharing", model_path, quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1SuaUJpR9Dla7tucNWF1Unzc0lL9yEfC8", model_path, quiet=False)
 audio_model = load_model(model_path)
 label_encoder = LabelEncoder()
 label_encoder.fit(["angry", "calm", "disgust", "fearful", "happy", "neutral", "sad", "surprised"])
