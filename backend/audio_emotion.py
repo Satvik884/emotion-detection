@@ -3,9 +3,14 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 import soundfile as sf
+import gdown 
 
 # Load the pre-trained emotion detection model and label encoder
-audio_model = load_model('my_model.h5')
+model_path = 'my_model.h5'
+if not os.path.exists(model_path):
+    # Google Drive direct download link (replace with your own)
+    gdown.download("https://drive.google.com/file/d/1SuaUJpR9Dla7tucNWF1Unzc0lL9yEfC8/view?usp=sharing", model_path, quiet=False)
+audio_model = load_model(model_path)
 label_encoder = LabelEncoder()
 label_encoder.fit(["angry", "calm", "disgust", "fearful", "happy", "neutral", "sad", "surprised"])
 
