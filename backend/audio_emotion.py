@@ -4,6 +4,7 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 import soundfile as sf
 import gdown 
+import os
 
 # Load the pre-trained emotion detection model and label encoder
 model_path = 'my_model.h5'
