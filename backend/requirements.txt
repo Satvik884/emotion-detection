@@ -10,3 +10,4 @@ mtcnn
 librosa
 scikit-learn
 gdown
+tensorflow
