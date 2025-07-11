@@ -7,7 +7,6 @@ numpy
 sounddevice
 soundfile
 mtcnn
-tensorflow
 librosa
 scikit-learn
 gdown
